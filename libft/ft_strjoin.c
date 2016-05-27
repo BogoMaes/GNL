@@ -14,6 +14,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
+	ft_putendl("rien");
 	int		i;
 	int		j;
 	char	*join;
@@ -26,15 +27,22 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		join = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
 		if (join != NULL)
 		{
-			while (s1[++i])
+			ft_putendl("y");
+			while (s1[++i] != '\0')
+			{
+				ft_putnbr(i);
+				ft_putendl("");
 				join[i] = s1[i];
+			}
 			while (s2[j])
 			{
+				ft_putendl("z");
 				join[i + j] = s2[j];
 				j++;
 			}
 			join[i + j] = '\0';
 		}
 	}
+	ft_putendl("xyz");
 	return (join);
 }
