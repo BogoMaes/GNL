@@ -23,7 +23,7 @@ static char	*inttop(char *nb)
 	nb = (char*)malloc(sizeof(char) * 12);
 	if (nb == NULL)
 		return (NULL);
-	nb = ft_strcpy(nb, tab);
+	ft_strcpy(&nb, tab);
 	return (nb);
 }
 
